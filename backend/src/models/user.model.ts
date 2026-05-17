@@ -78,9 +78,6 @@ userSchema.statics.findByEmail = function findByEmail(email: string) {
 
 userSchema.set('toJSON', {
   transform: (_doc, ret) => {
-    ret.password = undefined;
-    ret.__v = undefined;
-
     return ret;
   },
 });
